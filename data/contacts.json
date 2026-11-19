@@ -1,0 +1,9 @@
+{
+  "_example.com": [
+    { "first_name": "Jane", "last_name": "Doe", "position": "Co-founder & CTO", "email": "jane@example.com", "source": "apollo (manual)" }
+  ],
+  "rillet.com": [
+    { "first_name": "Stelios", "last_name": "Modes", "position": "Co-founder & CTO", "email": null, "source": "rillet.com/about lists name; title from public knowledge, verify in Apollo" },
+    { "first_name": "Nicolas", "last_name": "Kopp", "position": "Co-founder & CEO", "email": null, "source": "rillet.com/about lists name; title from public knowledge, verify in Apollo" }
+  ]
+}

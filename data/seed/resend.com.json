@@ -1,0 +1,333 @@
+{
+  "domain": "resend.com",
+  "company": "Resend",
+  "startedAt": "2026-11-19T17:32:18.572Z",
+  "trace": [
+    {
+      "step": "scrape",
+      "decision": "homepage read via request",
+      "why": "957 words after cleaning"
+    },
+    {
+      "step": "scrape",
+      "decision": "13 open roles on ashby",
+      "why": "public job-board API"
+    },
+    {
+      "step": "qualify",
+      "decision": "qualified",
+      "why": "fit 100/100"
+    },
+    {
+      "step": "contact",
+      "decision": "Bu Kinoshita (Co-Founder and Chief Technology Officer)",
+      "why": "early stage -> title priority #1 matched \"Co-Founder and Chief Technology Officer\", email confidence 97% via hunter"
+    },
+    {
+      "step": "pain points",
+      "decision": "Maintaining and scaling our existing SOC 2 and GDPR compliance posture while managing rapid growth and enterprise customer demands is becoming increasingly resource-intensive. | I am struggling to balance the need for rigorous security engineering with the operational overhead of manual compliance tasks, as evidenced by our active search for security engineering talent.",
+      "why": "E3+E4+E5+E6+E7 / E9+E10+E11"
+    },
+    {
+      "step": "write",
+      "decision": "draft passed validator",
+      "why": "108 words, hook on E9"
+    }
+  ],
+  "facts": {
+    "product_summary": {
+      "value": "Resend provides an email platform for developers to send transactional and marketing emails.",
+      "quote": "The best way to reach humans instead of spam folders. Deliver transactional and marketing emails at scale.",
+      "source": "https://resend.com/"
+    },
+    "is_b2b_saas": {
+      "value": true,
+      "quote": "Companies of all sizes trust Resend to deliver their most important emails.",
+      "source": "https://resend.com/"
+    },
+    "buyer": {
+      "value": "Developers and engineering teams at companies of all sizes.",
+      "quote": "We are a team of engineers who love building tools for other engineers.",
+      "source": "https://resend.com/"
+    },
+    "funding_stage": null,
+    "employee_count": null,
+    "certifications_held": [
+      {
+        "value": "SOC 2",
+        "quote": "ooksDedicated IPsResourcesChangelogPricingEnterpriseSecuritySOC 2",
+        "source": "https://resend.com/",
+        "by": "regex"
+      },
+      {
+        "value": "GDPR",
+        "quote": "og /pricing /enterprise /security /security/soc-2 /security/gdpr /brand /about /blog /careers /clubs /customers /humans /phi",
+        "source": "https://resend.com/",
+        "by": "regex"
+      }
+    ],
+    "certifications_in_progress": [],
+    "enterprise_signals": [
+      {
+        "value": "customer: MrBeast",
+        "quote": "Bradley GreenwoodVP of Engineering at MrBeast",
+        "source": "https://resend.com/"
+      },
+      {
+        "value": "customer: Gumroad",
+        "quote": "Sahil LavingiaCEO of Gumroad",
+        "source": "https://resend.com/"
+      },
+      {
+        "value": "customer: Replit",
+        "quote": "Amadeo PellicceConnectors, Agents and Automations Lead at Replit",
+        "source": "https://resend.com/"
+      }
+    ],
+    "compliance_pressure": [
+      {
+        "value": "comply with standards like the CAN-SPAM Act",
+        "quote": "Prevent repeated sending to recipients who no longer want your email and comply with standards like the CAN-SPAM Act",
+        "source": "https://resend.com/"
+      },
+      {
+        "value": "hiring: Security Engineer, Platform",
+        "quote": "Security Engineer, Platform",
+        "source": "https://api.ashbyhq.com/posting-api/job-board/resend",
+        "by": "jobs-api"
+      },
+      {
+        "value": "hiring: Security Engineer, Platform",
+        "quote": "Security Engineer, Platform",
+        "source": "https://api.ashbyhq.com/posting-api/job-board/resend",
+        "by": "jobs-api"
+      }
+    ],
+    "recent_news": [],
+    "discarded": 0,
+    "platform": null,
+    "jobs": {
+      "board": "ashby",
+      "url": "https://api.ashbyhq.com/posting-api/job-board/resend",
+      "titles": [
+        "Security Engineer, Platform",
+        "Backend Engineer, MTA",
+        "Security Engineer, Platform",
+        "Technical Account Executive",
+        "Backend Engineer, MTA",
+        "Backend Engineer",
+        "Backend Engineer",
+        "Software Engineer, Developer Tools",
+        "Software Engineer, Developer Tools",
+        "Software Engineer, Trust & Safety ",
+        "Software Engineer, Trust & Safety ",
+        "Platform Engineer",
+        "Platform Engineer"
+      ]
+    }
+  },
+  "gates": [
+    {
+      "name": "Reachable",
+      "pass": true,
+      "why": "homepage fetched and cleaned"
+    },
+    {
+      "name": "B2B SaaS",
+      "pass": true,
+      "why": "\"Companies of all sizes trust Resend to deliver their most important emails.\""
+    },
+    {
+      "name": "Not already on a compliance platform",
+      "pass": true,
+      "why": "no Vanta/Drata/Secureframe/etc. found"
+    },
+    {
+      "name": "Has frameworks left to get",
+      "pass": true,
+      "why": "still to get: ISO 27001 (holds SOC 2, GDPR)"
+    },
+    {
+      "name": "Series A-C",
+      "pass": true,
+      "why": "13 open roles on ashby"
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://resend.com",
+      "ok": true,
+      "method": "request",
+      "words": 957
+    }
+  ],
+  "score": 75,
+  "flagged": false,
+  "contact": {
+    "ok": true,
+    "person": {
+      "first_name": "Bu",
+      "last_name": "Kinoshita",
+      "position": "Co-Founder and Chief Technology Officer",
+      "email": "[email hidden]",
+      "confidence": 97,
+      "linkedin": "https://www.linkedin.com/in/bkinoshita",
+      "source": "hunter"
+    },
+    "tier": "early",
+    "rank": 1,
+    "why": "early stage -> title priority #1 matched \"Co-Founder and Chief Technology Officer\", email confidence 97%",
+    "source": "hunter",
+    "consideredCount": 9
+  },
+  "evidence": [
+    {
+      "id": "E1",
+      "label": "Product",
+      "value": "Resend provides an email platform for developers to send transactional and marketing emails.",
+      "quote": "The best way to reach humans instead of spam folders. Deliver transactional and marketing emails at scale.",
+      "source": "https://resend.com/"
+    },
+    {
+      "id": "E2",
+      "label": "Buyer",
+      "value": "Developers and engineering teams at companies of all sizes.",
+      "quote": "We are a team of engineers who love building tools for other engineers.",
+      "source": "https://resend.com/"
+    },
+    {
+      "id": "E3",
+      "label": "Certification held",
+      "value": "SOC 2",
+      "quote": "ooksDedicated IPsResourcesChangelogPricingEnterpriseSecuritySOC 2",
+      "source": "https://resend.com/"
+    },
+    {
+      "id": "E4",
+      "label": "Certification held",
+      "value": "GDPR",
+      "quote": "og /pricing /enterprise /security /security/soc-2 /security/gdpr /brand /about /blog /careers /clubs /customers /humans /phi",
+      "source": "https://resend.com/"
+    },
+    {
+      "id": "E5",
+      "label": "Enterprise signal",
+      "value": "customer: MrBeast",
+      "quote": "Bradley GreenwoodVP of Engineering at MrBeast",
+      "source": "https://resend.com/"
+    },
+    {
+      "id": "E6",
+      "label": "Enterprise signal",
+      "value": "customer: Gumroad",
+      "quote": "Sahil LavingiaCEO of Gumroad",
+      "source": "https://resend.com/"
+    },
+    {
+      "id": "E7",
+      "label": "Enterprise signal",
+      "value": "customer: Replit",
+      "quote": "Amadeo PellicceConnectors, Agents and Automations Lead at Replit",
+      "source": "https://resend.com/"
+    },
+    {
+      "id": "E8",
+      "label": "Compliance pressure",
+      "value": "comply with standards like the CAN-SPAM Act",
+      "quote": "Prevent repeated sending to recipients who no longer want your email and comply with standards like the CAN-SPAM Act",
+      "source": "https://resend.com/"
+    },
+    {
+      "id": "E9",
+      "label": "Compliance pressure",
+      "value": "hiring: Security Engineer, Platform",
+      "quote": "Security Engineer, Platform",
+      "source": "https://api.ashbyhq.com/posting-api/job-board/resend"
+    },
+    {
+      "id": "E10",
+      "label": "Compliance pressure",
+      "value": "hiring: Security Engineer, Platform",
+      "quote": "Security Engineer, Platform",
+      "source": "https://api.ashbyhq.com/posting-api/job-board/resend"
+    },
+    {
+      "id": "E11",
+      "label": "Open roles",
+      "value": "13 open roles",
+      "quote": "Security Engineer, Platform; Backend Engineer, MTA; Security Engineer, Platform; Technical Account Executive; Backend Engineer, MTA; Backend Engineer",
+      "source": "https://api.ashbyhq.com/posting-api/job-board/resend"
+    },
+    {
+      "id": "E12",
+      "label": "Frameworks not yet shown on site",
+      "value": "ISO 27001",
+      "quote": "(absence: not found on any page read)",
+      "source": "code"
+    }
+  ],
+  "pains": [
+    {
+      "pain": "Maintaining and scaling our existing SOC 2 and GDPR compliance posture while managing rapid growth and enterprise customer demands is becoming increasingly resource-intensive.",
+      "evidence_ids": [
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7"
+      ],
+      "why_this_person": "As CTO, Bu Kinoshita is responsible for the infrastructure and security architecture that supports high-profile enterprise customers like MrBeast and Replit, making the maintenance of existing certifications a critical operational burden."
+    },
+    {
+      "pain": "I am struggling to balance the need for rigorous security engineering with the operational overhead of manual compliance tasks, as evidenced by our active search for security engineering talent.",
+      "evidence_ids": [
+        "E9",
+        "E10",
+        "E11"
+      ],
+      "why_this_person": "The CTO is actively hiring for security engineering roles, suggesting that the team is currently stretched thin and needs to optimize how they handle security and compliance to free up engineering capacity for core product development."
+    }
+  ],
+  "email": {
+    "subject": "compliance automation at resend",
+    "body": "Hi Bu, I noticed that Resend is currently hiring for a Security Engineer, Platform role to support your growing infrastructure. As you scale to support enterprise customers like MrBeast and Replit, maintaining your existing SOC 2 and GDPR posture alongside new frameworks like ISO 27001 often creates significant operational overhead. Sprinto automates this process by connecting directly to your cloud, HR, and code tools to collect evidence and monitor controls continuously. This allows your engineering team to focus on building your email platform rather than manual compliance tasks. Would you be open to a brief conversation about how we can help manage your compliance posture as you grow?",
+    "hook_evidence_id": "E9",
+    "hook_sentence": "I noticed that Resend is currently hiring for a Security Engineer, Platform role to support your growing infrastructure."
+  },
+  "validation": {
+    "ok": true,
+    "errors": [],
+    "words": 108
+  },
+  "status": "ready",
+  "reason": "dry run: passed every gate, not sent",
+  "seconds": 65,
+  "geminiCalls": 3,
+  "scoreParts": [
+    {
+      "pts": 30,
+      "why": "passed all hard gates"
+    },
+    {
+      "pts": 10,
+      "why": "stage inferred (open roles or enterprise plan)"
+    },
+    {
+      "pts": 15,
+      "why": "hiring for security/compliance: Security Engineer, Platform"
+    },
+    {
+      "pts": 5,
+      "why": "compliance pressure: comply with standards like the CAN-SPAM Act"
+    },
+    {
+      "pts": 10,
+      "why": "sells to enterprise: customer: MrBeast"
+    },
+    {
+      "pts": 5,
+      "why": "already holds SOC 2, GDPR (knows the audit pain)"
+    }
+  ],
+  "updatedAt": "2026-11-19T17:38:21.942Z"
+}

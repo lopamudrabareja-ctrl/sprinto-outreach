@@ -1,0 +1,122 @@
+{
+  "domain": "tldraw.com",
+  "company": "Tldraw",
+  "startedAt": "2026-11-19T17:36:17.522Z",
+  "trace": [
+    {
+      "step": "scrape",
+      "decision": "homepage read via jina",
+      "why": "38 words after cleaning"
+    },
+    {
+      "step": "scrape",
+      "decision": "1 open roles on ashby",
+      "why": "public job-board API"
+    },
+    {
+      "step": "qualify",
+      "decision": "fetch https://tldraw.com/product for \"b2b\"",
+      "why": "conventional path from evidence map (picked by code) - failed: blocked by robots.txt"
+    },
+    {
+      "step": "qualify",
+      "decision": "fetch https://tldraw.com/security for \"certs\"",
+      "why": "conventional path from evidence map (picked by code) - failed: blocked by robots.txt"
+    },
+    {
+      "step": "qualify",
+      "decision": "fetch https://tldraw.com/careers for \"stage\"",
+      "why": "conventional path from evidence map (picked by code) - failed: blocked by robots.txt"
+    },
+    {
+      "step": "qualify",
+      "decision": "fetch https://tldraw.com/pricing for \"stage\"",
+      "why": "conventional path from evidence map (picked by code) - failed: blocked by robots.txt"
+    },
+    {
+      "step": "qualify",
+      "decision": "stopped with unanswered: b2b, stage",
+      "why": "budget or cap (4/4) reached"
+    },
+    {
+      "step": "qualify",
+      "decision": "review",
+      "why": "B2B unknown after budget"
+    }
+  ],
+  "facts": {
+    "product_summary": {
+      "value": "tldraw sells a software development kit for building applications.",
+      "quote": "Build with the tldraw SDK",
+      "source": "https://tldraw.com"
+    },
+    "is_b2b_saas": null,
+    "buyer": null,
+    "funding_stage": null,
+    "employee_count": null,
+    "certifications_held": [],
+    "certifications_in_progress": [],
+    "enterprise_signals": [],
+    "compliance_pressure": [],
+    "recent_news": [],
+    "discarded": 0,
+    "platform": null,
+    "jobs": {
+      "board": "ashby",
+      "url": "https://api.ashbyhq.com/posting-api/job-board/tldraw",
+      "titles": [
+        "Design Engineer"
+      ]
+    }
+  },
+  "gates": [
+    {
+      "name": "Reachable",
+      "pass": true,
+      "why": "homepage fetched and cleaned"
+    },
+    {
+      "name": "B2B SaaS",
+      "pass": null,
+      "why": "not stated on any page read"
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://tldraw.com",
+      "ok": true,
+      "method": "jina",
+      "words": 38
+    },
+    {
+      "url": "https://tldraw.com/product",
+      "ok": false,
+      "reason": "blocked by robots.txt",
+      "for": "b2b"
+    },
+    {
+      "url": "https://tldraw.com/security",
+      "ok": false,
+      "reason": "blocked by robots.txt",
+      "for": "certs"
+    },
+    {
+      "url": "https://tldraw.com/careers",
+      "ok": false,
+      "reason": "blocked by robots.txt",
+      "for": "stage"
+    },
+    {
+      "url": "https://tldraw.com/pricing",
+      "ok": false,
+      "reason": "blocked by robots.txt",
+      "for": "stage"
+    }
+  ],
+  "score": 0,
+  "flagged": false,
+  "status": "review",
+  "reason": "B2B unknown after budget",
+  "seconds": 25,
+  "geminiCalls": 1
+}

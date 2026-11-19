@@ -1,0 +1,142 @@
+{
+  "domain": "dub.co",
+  "company": "Dub",
+  "startedAt": "2026-11-19T17:30:21.520Z",
+  "trace": [
+    {
+      "step": "scrape",
+      "decision": "homepage read via request",
+      "why": "639 words after cleaning"
+    },
+    {
+      "step": "qualify",
+      "decision": "qualified",
+      "why": "fit 90/100"
+    },
+    {
+      "step": "contact",
+      "decision": "Steven Tey (CEO)",
+      "why": "early stage -> title priority #3 matched \"CEO\", email confidence 67% via hunter"
+    },
+    {
+      "step": "error",
+      "decision": "pipeline error",
+      "why": "Gemini unavailable for write: gemini-3.5-flash:  timed out after 45s | gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 14h27m42.221959558s. | gemini-flash-latest: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 14h27m41.616220069s."
+    }
+  ],
+  "facts": {
+    "product_summary": {
+      "value": "Dub sells a link attribution platform for short links, conversion tracking, and affiliate programs to marketing teams.",
+      "quote": "Dub is the modern link attribution platform for short links, conversion tracking, and affiliate programs.",
+      "source": "https://dub.co/"
+    },
+    "is_b2b_saas": {
+      "value": true,
+      "quote": "Dub is the modern link attribution platform for short links, conversion tracking, and affiliate programs.",
+      "source": "https://dub.co/"
+    },
+    "buyer": {
+      "value": "marketing teams",
+      "quote": "See why Dub is the link attribution platform of choice for modern marketing teams.",
+      "source": "https://dub.co/"
+    },
+    "funding_stage": null,
+    "employee_count": null,
+    "certifications_held": [
+      {
+        "value": "SOC 2",
+        "quote": "Nick Parsons Cal.com Peer Richelsen jobber superlist AICPA SOC 2",
+        "source": "https://dub.co/",
+        "by": "regex"
+      }
+    ],
+    "certifications_in_progress": [],
+    "enterprise_signals": [
+      {
+        "value": "Enterprise-grade link infrastructure",
+        "quote": "Enterprise-grade link infrastructure",
+        "source": "https://dub.co/"
+      },
+      {
+        "value": "Trusted by enterprises",
+        "quote": "Trusted by startups and enterprises",
+        "source": "https://dub.co/"
+      }
+    ],
+    "compliance_pressure": [
+      {
+        "value": "tax compliance built in",
+        "quote": "Effortlessly send payouts to partners globally, with tax compliance built in.",
+        "source": "https://dub.co/"
+      }
+    ],
+    "recent_news": [
+      {
+        "value": "Letting partners switch groups via application",
+        "quote": "Letting partners switch groups via applicationOct 7, 2026",
+        "source": "https://dub.co/"
+      }
+    ],
+    "discarded": 0,
+    "platform": null,
+    "jobs": null
+  },
+  "gates": [
+    {
+      "name": "Reachable",
+      "pass": true,
+      "why": "homepage fetched and cleaned"
+    },
+    {
+      "name": "B2B SaaS",
+      "pass": true,
+      "why": "\"Dub is the modern link attribution platform for short links, conversion tracking, and affiliate programs.\""
+    },
+    {
+      "name": "Not already on a compliance platform",
+      "pass": true,
+      "why": "no Vanta/Drata/Secureframe/etc. found"
+    },
+    {
+      "name": "Has frameworks left to get",
+      "pass": true,
+      "why": "still to get: ISO 27001, GDPR (holds SOC 2)"
+    },
+    {
+      "name": "Series A-C",
+      "pass": true,
+      "why": "enterprise signal: Enterprise-grade link infrastructure"
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://dub.co",
+      "ok": true,
+      "method": "request",
+      "words": 639
+    }
+  ],
+  "score": 90,
+  "flagged": false,
+  "contact": {
+    "ok": true,
+    "person": {
+      "first_name": "Steven",
+      "last_name": "Tey",
+      "position": "CEO",
+      "email": "[email hidden]",
+      "confidence": 67,
+      "linkedin": "https://www.linkedin.com/in/steventey",
+      "source": "hunter"
+    },
+    "tier": "early",
+    "rank": 3,
+    "why": "early stage -> title priority #3 matched \"CEO\", email confidence 67%",
+    "source": "hunter",
+    "consideredCount": 3
+  },
+  "status": "review",
+  "reason": "error: Gemini unavailable for write: gemini-3.5-flash:  timed out after 45s | gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 14h27m42.221959558s. | gemini-flash-latest: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 14h27m41.616220069s.",
+  "seconds": 117,
+  "geminiCalls": 1
+}

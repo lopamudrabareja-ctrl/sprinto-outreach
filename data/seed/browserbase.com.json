@@ -1,0 +1,21 @@
+{
+  "domain": "browserbase.com",
+  "company": "Browserbase",
+  "startedAt": "2026-11-19T17:34:13.248Z",
+  "trace": [
+    {
+      "step": "scrape",
+      "decision": "homepage read via request",
+      "why": "480 words after cleaning"
+    },
+    {
+      "step": "error",
+      "decision": "pipeline error",
+      "why": "Gemini unavailable for extract: gemini-3.5-flash:  timed out after 45s | gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 14h23m43.022029575s. | gemini-flash-latest: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 14h23m42.622143672s."
+    }
+  ],
+  "status": "review",
+  "reason": "error: Gemini unavailable for extract: gemini-3.5-flash:  timed out after 45s | gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 14h23m43.022029575s. | gemini-flash-latest: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 14h23m42.622143672s.",
+  "seconds": 124,
+  "geminiCalls": 0
+}

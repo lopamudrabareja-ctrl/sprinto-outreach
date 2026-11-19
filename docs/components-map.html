@@ -1,0 +1,190 @@
+<title>Sprinto Outreach Components Map</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap">
+<style>
+/* Layout: swimlane map, actors as rows, Trigger→Output as columns, one guardrail bar, one legend. */
+:root {
+  --bg: #f6f7f9; --panel: #ffffff; --ink: #1b1f27; --muted: #5d6573; --line: #dfe3ea; --head: #151a22; --head-ink: #f4f6fa;
+  --human-f: #eaf1fe; --human-s: #3b6fd8; --human-t: #1d438f;
+  --app-f: #f1f3f6;   --app-s: #3a4250;   --app-t: #1f2530;
+  --ai-f: #fdecf2;    --ai-s: #c43b6b;    --ai-t: #8a1f45;
+  --ext-f: #f2eefd;   --ext-s: #6a55c9;   --ext-t: #3d2e8a;
+  --data-f: #e8f6ef;  --data-s: #1f9161;  --data-t: #12603f;
+  --gate-f: #fff6da;  --gate-s: #d29a0c;  --gate-t: #7a5600;
+  --pill: #ffffff; --dot: #1f9161; --warn: #e3a614;
+  --display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --text: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0f1217; --panel: #161a21; --ink: #e8ebf1; --muted: #9aa3b2; --line: #2a303b; --head: #05070a; --head-ink: #eef1f6;
+  --human-f: #15233d; --human-s: #6f9bf0; --human-t: #c7d8fb;
+  --app-f: #1c2129;   --app-s: #8b95a6;   --app-t: #e1e5ec;
+  --ai-f: #351624;    --ai-s: #e67199;    --ai-t: #f8c9da;
+  --ext-f: #221c3d;   --ext-s: #9d8cf0;   --ext-t: #ddd6fb;
+  --data-f: #11291f;  --data-s: #4cc38d;  --data-t: #bdebd5;
+  --gate-f: #33290c;  --gate-s: #e8b53a;  --gate-t: #f7e2a8;
+  --pill: #161a21; --dot: #4cc38d; --warn: #e8b53a; color-scheme: dark;
+} }
+:root[data-theme="dark"] {
+  --bg: #0f1217; --panel: #161a21; --ink: #e8ebf1; --muted: #9aa3b2; --line: #2a303b; --head: #05070a; --head-ink: #eef1f6;
+  --human-f: #15233d; --human-s: #6f9bf0; --human-t: #c7d8fb;
+  --app-f: #1c2129;   --app-s: #8b95a6;   --app-t: #e1e5ec;
+  --ai-f: #351624;    --ai-s: #e67199;    --ai-t: #f8c9da;
+  --ext-f: #221c3d;   --ext-s: #9d8cf0;   --ext-t: #ddd6fb;
+  --data-f: #11291f;  --data-s: #4cc38d;  --data-t: #bdebd5;
+  --gate-f: #33290c;  --gate-s: #e8b53a;  --gate-t: #f7e2a8;
+  --pill: #161a21; --dot: #4cc38d; --warn: #e8b53a; color-scheme: dark;
+}
+body { background: var(--bg); color: var(--ink); font-family: var(--text); }
+.wrap { max-width: 1680px; margin: 0 auto; padding-block: 24px 40px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 16px; }
+.title { background: var(--head); color: var(--head-ink); border-radius: 10px; padding: 18px 20px; text-align: center; font-family: var(--display); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; font-size: clamp(15px, 2.2vw, 26px); text-wrap: balance; }
+.map { overflow-x: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; }
+.map svg { display: block; min-width: 1100px; width: 100%; height: auto; }
+.guard { background: var(--head); color: var(--head-ink); border-radius: 10px; padding: 14px 18px; text-align: center; font-size: 15px; line-height: 1.5; text-wrap: balance; }
+.guard b { color: var(--warn); font-weight: 600; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px 22px; justify-content: center; font-size: 13px; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 8px; }
+.sw { width: 26px; height: 16px; border-radius: 4px; border: 1.5px solid; display: inline-block; }
+.note { text-align: center; color: var(--muted); font-size: 12.5px; }
+.note a { color: inherit; }
+</style>
+
+<div class="wrap">
+  <div class="title">Sprinto Outreach · Components Map</div>
+  <div class="map"><svg id="map" viewBox="0 0 1640 1150" role="img" aria-labelledby="mt md">
+    <title id="mt">Sprinto Outreach components map</title>
+    <desc id="md">Swimlane map. Lanes: Growth Lead, Outreach app, public web, Hunter or Apollo, Gemini, Gmail, storage. Columns: trigger, input, context, processing, output. Thirteen numbered steps from pasting domains to an email landing in your own inbox, with two human gates.</desc>
+  </svg></div>
+  <div class="guard"><b>GUARDRAIL</b> · Gemini reads pages and writes. Code decides every gate. Anything unclear is parked for a human, never guessed, and email only ever goes to your own inbox.</div>
+  <div class="legend">
+    <span><i class="sw" style="background:var(--human-f);border-color:var(--human-s)"></i>Human action</span>
+    <span><i class="sw" style="background:var(--app-f);border-color:var(--app-s)"></i>App logic (code, not AI)</span>
+    <span><i class="sw" style="background:var(--ai-f);border-color:var(--ai-s)"></i>AI (Gemini)</span>
+    <span><i class="sw" style="background:var(--ext-f);border-color:var(--ext-s)"></i>External service</span>
+    <span><i class="sw" style="background:var(--data-f);border-color:var(--data-s)"></i>Storage</span>
+    <span><i class="sw" style="background:var(--gate-f);border-color:var(--gate-s)"></i>Human gate</span>
+    <span><i class="sw" style="background:transparent;border-color:var(--muted);border-style:dashed"></i>Optional / loop</span>
+  </div>
+  <div class="note">MESA Term 2 · AI Case 2 · case-study build, not affiliated with Sprinto · live at sprinto-outreach-mu.vercel.app</div>
+</div>
+
+<script>
+(() => {
+  const NS = 'http://www.w3.org/2000/svg';
+  const svg = document.getElementById('map');
+  const LABEL_W = 210, COL_W = 280, HEAD = 76, LANE_H = 150, BW = 240, BH = 110;
+  const COLS = ['Trigger', 'Input', 'Context', 'Processing', 'Output'];
+  const LANES = [
+    ['Growth Lead', '(user)'], ['Outreach app', '(code)'], ['Public web', '(sites, job boards)'],
+    ['Hunter / Apollo', '(contacts)'], ['Gemini', '(LLM)'], ['Gmail', '(send)'], ['Storage', '(JSON / Postgres)'],
+  ];
+  const W = LABEL_W + COLS.length * COL_W + 90;
+  const H = HEAD + LANES.length * LANE_H + 10;
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+
+  const el = (tag, attrs, parent = svg) => {
+    const e = document.createElementNS(NS, tag);
+    for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
+    parent.appendChild(e);
+    return e;
+  };
+  const colX = (c) => LABEL_W + c * COL_W;
+  const laneY = (l) => HEAD + l * LANE_H;
+
+  const defs = el('defs', {});
+  const mk = el('marker', { id: 'ah', viewBox: '0 0 10 10', refX: 8, refY: 5, markerWidth: 7, markerHeight: 7, orient: 'auto-start-reverse' }, defs);
+  el('path', { d: 'M1 1 L9 5 L1 9 Z', fill: 'var(--app-s)' }, mk);
+
+  // grid: lanes, columns, headers
+  LANES.forEach((ln, i) => {
+    const y = laneY(i);
+    el('rect', { x: 0, y, width: W, height: LANE_H, fill: i % 2 ? 'var(--panel)' : 'var(--bg)' });
+    el('line', { x1: 0, x2: W, y1: y, y2: y, stroke: 'var(--line)', 'stroke-width': 1 });
+    const t = el('text', { x: LABEL_W / 2, y: y + LANE_H / 2 - 8, 'text-anchor': 'middle', 'font-family': 'var(--display)', 'font-size': 18, 'font-weight': 600, fill: 'var(--ink)' });
+    t.textContent = ln[0];
+    const s = el('text', { x: LABEL_W / 2, y: y + LANE_H / 2 + 16, 'text-anchor': 'middle', 'font-size': 14, fill: 'var(--muted)' });
+    s.textContent = ln[1];
+  });
+  el('line', { x1: LABEL_W, x2: LABEL_W, y1: 0, y2: H, stroke: 'var(--line)', 'stroke-width': 2 });
+  COLS.forEach((c, i) => {
+    const x = colX(i);
+    if (i) el('line', { x1: x, x2: x, y1: 0, y2: HEAD, stroke: 'var(--line)', 'stroke-width': 1 });
+    const t = el('text', { x: x + COL_W / 2, y: 36, 'text-anchor': 'middle', 'font-family': 'var(--display)', 'font-size': 17, 'font-weight': 600, 'letter-spacing': '3', fill: 'var(--ink)' });
+    t.textContent = c.toUpperCase();
+    el('circle', { cx: x + COL_W / 2, cy: 60, r: 7, fill: 'var(--dot)' });
+  });
+
+  // nodes: [num, col, lane, kind, kicker, lines, dashed]
+  const NODES = [
+    [1, 0, 0, 'human', '', ['Pastes a list of domains', 'clicks Run', '(dry run or send)']],
+    [null, 2, 0, 'human', '', ['Opens any company to see', 'why: gates, quotes, pages,', 'the full decision trace'], true],
+    [2, 1, 1, 'app', '', ['Takes one domain at a time', 'checks robots.txt', 'caches pages for 7 days']],
+    [3, 1, 2, 'ext', '', ['Homepage → clean ~2k tokens', 'JS-only page → Jina Reader', '+ open roles via job APIs']],
+    [4, 1, 4, 'ai', '', ['Extracts named facts', 'each with a verbatim quote', 'from the page']],
+    [5, 2, 1, 'app', 'Quote check', ['drops quotes not on the page', 'regex: SOC 2, ISO, Vanta…', 'which fields are still empty?']],
+    [6, 2, 4, 'ai', 'Agent loop', ['Picks which of the site’s', 'own links to read next', 'max 4 extra pages']],
+    [7, 3, 1, 'app', '5 gates + fit score', ['B2B · not on a platform', 'frameworks left · Series A–C', 'every point has a reason']],
+    [8, 3, 3, 'ext', '', ['People at the domain', 'title rules by stage', 'CTO early · security lead B–C']],
+    [9, 3, 4, 'ai', '', ['Writes 2 pain points + email', 'every claim cites evidence', '+ lessons from past edits']],
+    [10, 4, 1, 'app', 'Validator', ['name · 60–140 words · hook', 'no invented numbers', 'one rewrite, then route']],
+    [11, 4, 0, 'gate', 'Human gate', ['Review queue + Drafts', 'edit, approve, send', 'edits become lessons']],
+    [12, 4, 5, 'ext', '', ['Sends to your own inbox', 'footer: intended for', 'whom, and why']],
+    [13, 4, 6, 'data', '', ['Saves every record + trace', 'dropped ones with the reason', 'lessons · Hunter cache']],
+  ];
+
+  const boxPos = {};
+  NODES.forEach(([n, c, l, kind, kicker, lines, dashed]) => {
+    const x = colX(c) + (COL_W - BW) / 2, y = laneY(l) + (LANE_H - BH) / 2;
+    if (n) boxPos[n] = { x, y, cx: x + BW / 2, cy: y + BH / 2, r: x + BW, b: y + BH };
+    const g = el('g', {});
+    el('rect', { x, y, width: BW, height: BH, rx: 10, fill: dashed ? 'transparent' : `var(--${kind}-f)`, stroke: `var(--${kind}-s)`, 'stroke-width': 2, 'stroke-dasharray': dashed ? '7 6' : 'none' }, g);
+    const rows = kicker ? [kicker.toUpperCase(), ...lines] : lines;
+    const lh = 21, top = y + BH / 2 - ((rows.length - 1) * lh) / 2;
+    rows.forEach((txt, i) => {
+      const isK = kicker && i === 0;
+      const t = el('text', { x: x + BW / 2, y: top + i * lh, 'text-anchor': 'middle', 'dominant-baseline': 'central', 'font-size': isK ? 12.5 : 14.5, 'font-weight': isK ? 600 : 400, 'letter-spacing': isK ? '1.6' : '0', fill: `var(--${kind}-t)`, 'font-family': isK ? 'var(--display)' : 'var(--text)' }, g);
+      t.textContent = txt;
+    });
+    if (n) {
+      el('circle', { cx: x + 4, cy: y + 4, r: 15, fill: `var(--${kind}-s)` }, g);
+      const t = el('text', { x: x + 4, y: y + 4, 'text-anchor': 'middle', 'dominant-baseline': 'central', 'font-size': 13, 'font-weight': 600, fill: 'var(--panel)' }, g);
+      t.textContent = n;
+    }
+  });
+
+  // arrows: path, label, label position, dashed
+  const B = boxPos;
+  const ARROWS = [
+    [`M${B[1].cx} ${B[1].b} V${B[2].cy} H${B[2].x - 3}`, 'domains', [B[1].cx, laneY(1)]],
+    [`M${B[2].cx} ${B[2].b} V${B[3].y - 3}`, 'fetch', [B[2].cx, laneY(2)]],
+    [`M${B[3].cx} ${B[3].b} V${B[4].y - 3}`, 'clean text', [B[3].cx, laneY(3) + LANE_H / 2]],
+    [`M${B[4].r} ${B[4].cy} H${colX(2) - 10} V${B[5].b + 30} H${B[5].x + 50} V${B[5].b + 3}`, 'facts + quotes', [colX(2) - 10, laneY(3) + LANE_H / 2]],
+    [`M${B[5].cx + 50} ${B[5].b} V${B[6].y - 3}`, 'fields missing?', [B[5].cx + 50, laneY(3) + LANE_H / 2], true],
+    [`M${B[5].x} ${B[5].y + 30} H${B[2].r + 3}`, '', null, true],
+    [`M${B[5].r} ${B[5].cy} H${B[7].x - 3}`, '', null],
+    [`M${B[7].cx} ${B[7].b} V${B[8].y - 3}`, 'qualified', [B[7].cx, laneY(2) + LANE_H / 2]],
+    [`M${B[8].cx} ${B[8].b} V${B[9].y - 3}`, 'the right person', [B[8].cx, laneY(4)]],
+    [`M${B[9].r} ${B[9].cy} H${colX(4) - 10} V${B[10].cy} H${B[10].x - 3}`, 'draft', [colX(4) - 10, laneY(3) + LANE_H / 2]],
+    [`M${B[7].cx} ${B[7].y} V${B[11].cy} H${B[11].x - 3}`, 'unclear / no contact', [B[7].cx + 10, laneY(0) + LANE_H / 2], true],
+    [`M${B[10].cx} ${B[10].y} V${B[11].b + 3}`, 'flagged or failed', [B[10].cx, laneY(1)], true],
+    [`M${B[10].cx} ${B[10].b} V${B[12].y - 3}`, 'clean', [B[10].cx, laneY(3) + LANE_H / 2]],
+    [`M${B[11].r} ${B[11].cy} H${W - 50} V${B[12].cy} H${B[12].r + 3}`, 'approved', [W - 50, laneY(3)], true],
+    [`M${B[6].cx - 50} ${B[6].y} V${B[5].b + 3}`, 'next link', [B[6].cx - 50, laneY(2) + LANE_H / 2], true],
+    [`M${B[12].cx} ${B[12].b} V${B[13].y - 3}`, 'logged', [B[12].cx, laneY(6)]],
+    [`M${B[13].x} ${B[13].cy} H${B[9].cx} V${B[9].b + 3}`, 'lessons', [B[9].cx, laneY(5) + LANE_H / 2], true],
+  ];
+  const labels = [];
+  ARROWS.forEach(([d, label, pos, dashed]) => {
+    el('path', { d, fill: 'none', stroke: 'var(--app-s)', 'stroke-width': 1.8, 'stroke-dasharray': dashed ? '6 5' : 'none', 'marker-end': 'url(#ah)' });
+    if (label) labels.push([label, pos]);
+  });
+  // labels last so they sit above lines
+  labels.forEach(([label, [x, y]]) => {
+    const w = label.length * 7.2 + 22;
+    el('rect', { x: x - w / 2, y: y - 12, width: w, height: 24, rx: 12, fill: 'var(--pill)', stroke: 'var(--line)', 'stroke-width': 1.2 });
+    const t = el('text', { x, y, 'text-anchor': 'middle', 'dominant-baseline': 'central', 'font-size': 12.5, 'font-style': 'italic', fill: 'var(--muted)' });
+    t.textContent = label;
+  });
+})();
+</script>

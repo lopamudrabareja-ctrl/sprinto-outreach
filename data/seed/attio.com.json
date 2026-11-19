@@ -1,0 +1,158 @@
+{
+  "domain": "attio.com",
+  "company": "Attio",
+  "startedAt": "2026-11-19T16:41:50.169Z",
+  "trace": [
+    {
+      "step": "scrape",
+      "decision": "homepage read via request",
+      "why": "634 words after cleaning"
+    },
+    {
+      "step": "scrape",
+      "decision": "21 open roles on ashby",
+      "why": "public job-board API"
+    },
+    {
+      "step": "qualify",
+      "decision": "fetch https://trust.attio.com for \"certs\"",
+      "why": "only link matching \"certs\" (picked by code)"
+    },
+    {
+      "step": "qualify",
+      "decision": "dropped",
+      "why": "Already on Vanta"
+    }
+  ],
+  "facts": {
+    "product_summary": {
+      "value": "Attio is a CRM platform designed for revenue teams to manage pipelines, deals, and account growth.",
+      "quote": "Attio is the platform that builds pipeline, advances deals, and grows accounts around the clock.",
+      "source": "https://attio.com/"
+    },
+    "is_b2b_saas": {
+      "value": true,
+      "quote": "Attio is the platform that builds pipeline, advances deals, and grows accounts around the clock.",
+      "source": "https://attio.com/"
+    },
+    "buyer": {
+      "value": "Revenue teams at companies ranging from startups to enterprise scale.",
+      "quote": "The system for revenue teams to build pipeline, accelerate deals, and grow accounts around the clock.",
+      "source": "https://attio.com/"
+    },
+    "funding_stage": null,
+    "employee_count": null,
+    "certifications_held": [
+      {
+        "value": "SOC 2",
+        "quote": "Attio is proud to announce the issuance of our SOC 2 Type 1",
+        "source": "https://trust.attio.com"
+      },
+      {
+        "value": "ISO 27001",
+        "quote": "Attio - ISO 27001 Certificate (1402109-2).pdf",
+        "source": "https://trust.attio.com"
+      },
+      {
+        "value": "GDPR",
+        "quote": "GDPR",
+        "source": "https://trust.attio.com",
+        "by": "regex"
+      }
+    ],
+    "certifications_in_progress": [],
+    "enterprise_signals": [
+      {
+        "value": "Enterprise scale support",
+        "quote": "Trusted by 30,000+ customers. From first agent to enterprise scale.",
+        "source": "https://attio.com/"
+      },
+      {
+        "value": "Pro plan",
+        "quote": "Six, on the Pro plan. I'll be the one signing off.",
+        "source": "https://attio.com/"
+      }
+    ],
+    "compliance_pressure": [],
+    "recent_news": [
+      {
+        "value": "Attio announced the issuance of their SOC 2 Type 1 report.",
+        "quote": "Attio is proud to announce the issuance of our SOC 2 Type 1, giving our customers independent validation",
+        "source": "https://trust.attio.com"
+      }
+    ],
+    "discarded": 2,
+    "platform": {
+      "value": "Vanta",
+      "quote": "vanta.com/products/trust",
+      "source": "https://trust.attio.com"
+    },
+    "jobs": {
+      "board": "ashby",
+      "url": "https://api.ashbyhq.com/posting-api/job-board/attio",
+      "titles": [
+        "Senior Product Engineer [Backend] ",
+        "Senior Product Engineer [Backend] ",
+        "Solutions Engineer [Pre and Post-Sales] - Mid-Market",
+        "Senior Platform Engineer ",
+        "General Application ",
+        "GTM Recruiter",
+        "Staff Product Engineer ",
+        "Staff Product Engineer ",
+        "Account Executive",
+        "Account Executive",
+        "Solutions Engineer [Pre and Post-Sales] - Mid-Market",
+        "Demand Generation Lead",
+        "Senior Product Engineer [Backend] ",
+        "Staff Product Engineer ",
+        "Senior Platform Engineer ",
+        "Senior Platform Engineer ",
+        "Communications Lead",
+        "Customer Success Manager ",
+        "Sales Development Representative",
+        "Communications Lead",
+        "GTM Recruiter"
+      ]
+    }
+  },
+  "gates": [
+    {
+      "name": "Reachable",
+      "pass": true,
+      "why": "homepage fetched and cleaned"
+    },
+    {
+      "name": "B2B SaaS",
+      "pass": true,
+      "why": "\"Attio is the platform that builds pipeline, advances deals, and grows accounts around the clock.\""
+    },
+    {
+      "name": "Not already on a compliance platform",
+      "pass": false,
+      "why": "uses Vanta (\"vanta.com/products/trust\")"
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://attio.com",
+      "ok": true,
+      "method": "request",
+      "words": 634
+    },
+    {
+      "url": "https://trust.attio.com",
+      "ok": true,
+      "method": "jina",
+      "words": 405,
+      "for": "certs"
+    }
+  ],
+  "score": 0,
+  "flagged": false,
+  "status": "dropped",
+  "reason": "Already on Vanta",
+  "seconds": 8,
+  "geminiCalls": 2,
+  "scoreParts": [],
+  "updatedAt": "2026-11-19T17:38:21.942Z"
+}

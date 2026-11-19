@@ -1,0 +1,396 @@
+{
+  "domain": "rillet.com",
+  "company": "Rillet",
+  "startedAt": "2026-11-19T16:40:49.137Z",
+  "trace": [
+    {
+      "step": "scrape",
+      "decision": "homepage read via request",
+      "why": "357 words after cleaning"
+    },
+    {
+      "step": "scrape",
+      "decision": "47 open roles on ashby",
+      "why": "public job-board API"
+    },
+    {
+      "step": "qualify",
+      "decision": "fetch https://www.rillet.com/product/audit-compliance for \"certs\"",
+      "why": "only link matching \"certs\" (picked by code)"
+    },
+    {
+      "step": "qualify",
+      "decision": "qualified",
+      "why": "fit 100/100"
+    },
+    {
+      "step": "contact",
+      "decision": "Stelios Modes (Co-founder & CTO)",
+      "why": "growth stage -> title priority #3 matched \"Co-founder & CTO\" via data/contacts.json"
+    },
+    {
+      "step": "pain points",
+      "decision": "I need to scale our compliance posture to support our SOX compliance framework and external audit requirements as we grow. | I am struggling to manage the manual overhead of maintaining our existing certifications while simultaneously expanding into new frameworks like ISO 27001.",
+      "why": "E9+E12 / E3+E4+E11+E14"
+    },
+    {
+      "step": "write",
+      "decision": "draft passed validator",
+      "why": "113 words, hook on E11"
+    }
+  ],
+  "facts": {
+    "product_summary": {
+      "value": "Rillet sells an AI-native ERP platform to finance teams at fast-growing companies.",
+      "quote": "Today's top finance teams trust Rillet to close faster, report in real time and move their business forward.",
+      "source": "https://www.rillet.com/"
+    },
+    "is_b2b_saas": {
+      "value": true,
+      "quote": "Modernize your accounting processes with an AI-native ERP built by Big Four CPAs.",
+      "source": "https://www.rillet.com/"
+    },
+    "buyer": {
+      "value": "finance teams at fast-growing companies",
+      "quote": "Fast-growing companies run their finance on Rillet.",
+      "source": "https://www.rillet.com/"
+    },
+    "funding_stage": null,
+    "employee_count": null,
+    "certifications_held": [
+      {
+        "value": "SOC 1",
+        "quote": "SOC 1 & SOC 2 Type II",
+        "source": "https://www.rillet.com/product/audit-compliance"
+      },
+      {
+        "value": "SOC 2",
+        "quote": "SOC 1 & SOC 2 Type II",
+        "source": "https://www.rillet.com/product/audit-compliance"
+      },
+      {
+        "value": "GDPR",
+        "quote": "GDPR committed\nAligned with international privacy expectations for global teams.",
+        "source": "https://www.rillet.com/product/audit-compliance"
+      }
+    ],
+    "certifications_in_progress": [],
+    "enterprise_signals": [
+      {
+        "value": "Multi-entity accounting",
+        "quote": "Multi-entity accounting",
+        "source": "https://www.rillet.com/"
+      },
+      {
+        "value": "Audit & Compliance",
+        "quote": "Audit & Compliance",
+        "source": "https://www.rillet.com/"
+      },
+      {
+        "value": "Enterprise SSO",
+        "quote": "Enterprise SSO\nThe right people see the right data.",
+        "source": "https://www.rillet.com/product/audit-compliance"
+      },
+      {
+        "value": "SOX compliance framework",
+        "quote": "Rillet's Aura agents operate inside a controls framework designed for SOX, ICFR, and external audit.",
+        "source": "https://www.rillet.com/product/audit-compliance"
+      }
+    ],
+    "compliance_pressure": [
+      {
+        "value": "Audit & Compliance",
+        "quote": "Audit & Compliance",
+        "source": "https://www.rillet.com/"
+      },
+      {
+        "value": "hiring: Founding GRC Analyst",
+        "quote": "Founding GRC Analyst",
+        "source": "https://api.ashbyhq.com/posting-api/job-board/rillet",
+        "by": "jobs-api"
+      },
+      {
+        "value": "SOX compliance",
+        "quote": "Rillet's Aura agents operate inside a controls framework designed for SOX, ICFR, and external audit.",
+        "source": "https://www.rillet.com/product/audit-compliance"
+      }
+    ],
+    "recent_news": [],
+    "discarded": 0,
+    "platform": null,
+    "jobs": {
+      "board": "ashby",
+      "url": "https://api.ashbyhq.com/posting-api/job-board/rillet",
+      "titles": [
+        "Accounting Success Manager",
+        "Engineering Manager",
+        "Manager, Deployment Team - Accounting Solutions",
+        "Product Manager ",
+        "Business Development Representative",
+        "Deployment Lead - Accounting Solutions",
+        "Solutions Consultant",
+        "Business Operations - AI Builder",
+        "Product Designer",
+        "Account Executive",
+        "Founding GRC Analyst",
+        "Account Manager",
+        "Accounting Subject Matter Expert",
+        "Design Engineer",
+        "Founders Associate",
+        "Applied AI Engineer",
+        "Customer Support Representative",
+        "Deployment Lead - ERP Solutions",
+        "Software Engineer",
+        "Technical Recruiter",
+        "GTM Recruiter",
+        "Staff Software Engineer, Revenue & Billing",
+        "Partnerships - Fractional CFO",
+        "Solutions Consultant - UK",
+        "Business Development Representative - UK",
+        "Deployment Lead - Accounting Solutions - UK",
+        "Account Executive - UK",
+        "Deployment Associate - Accounting Solutions",
+        "Head of Accounting & Advisory Partnerships",
+        "Partnerships, Accounting & Advisory",
+        "Partnerships, Technology & Product",
+        "Partnerships, Private Equity & Venture Capital",
+        "Partnerships Lead - Accounting & Advisory",
+        "Strategic Partnerships Lead - UK",
+        "Growth Associate",
+        "Accounting Success Manager - UK",
+        "Director, Product Marketing",
+        "Customer Success Manager, Finance & Accounting",
+        "Customer Excellence Solutions Architect",
+        "Finance Engineer",
+        "Director of Partner Implementation",
+        "Director of Revenue Operations",
+        "Director, Demand Generation",
+        "Director of Account Management",
+        "Marketing Manager, UK ",
+        "Solution Consulting Manager",
+        "Head of People"
+      ]
+    }
+  },
+  "gates": [
+    {
+      "name": "Reachable",
+      "pass": true,
+      "why": "homepage fetched and cleaned"
+    },
+    {
+      "name": "B2B SaaS",
+      "pass": true,
+      "why": "\"Modernize your accounting processes with an AI-native ERP built by Big Four CPAs.\""
+    },
+    {
+      "name": "Not already on a compliance platform",
+      "pass": true,
+      "why": "no Vanta/Drata/Secureframe/etc. found"
+    },
+    {
+      "name": "Has frameworks left to get",
+      "pass": true,
+      "why": "still to get: ISO 27001 (holds SOC 2, GDPR)"
+    },
+    {
+      "name": "Series A-C",
+      "pass": true,
+      "why": "47 open roles on ashby"
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://rillet.com",
+      "ok": true,
+      "method": "request",
+      "words": 357
+    },
+    {
+      "url": "https://www.rillet.com/product/audit-compliance",
+      "ok": true,
+      "method": "request",
+      "words": 360,
+      "for": "certs"
+    }
+  ],
+  "score": 80,
+  "flagged": false,
+  "contact": {
+    "ok": true,
+    "person": {
+      "first_name": "Stelios",
+      "last_name": "Modes",
+      "position": "Co-founder & CTO",
+      "email": null,
+      "source": "rillet.com/about lists name; title from public knowledge, verify in Apollo"
+    },
+    "tier": "growth",
+    "rank": 3,
+    "why": "growth stage -> title priority #3 matched \"Co-founder & CTO\"",
+    "source": "data/contacts.json",
+    "consideredCount": 2
+  },
+  "evidence": [
+    {
+      "id": "E1",
+      "label": "Product",
+      "value": "Rillet sells an AI-native ERP platform to finance teams at fast-growing companies.",
+      "quote": "Today's top finance teams trust Rillet to close faster, report in real time and move their business forward.",
+      "source": "https://www.rillet.com/"
+    },
+    {
+      "id": "E2",
+      "label": "Buyer",
+      "value": "finance teams at fast-growing companies",
+      "quote": "Fast-growing companies run their finance on Rillet.",
+      "source": "https://www.rillet.com/"
+    },
+    {
+      "id": "E3",
+      "label": "Certification held",
+      "value": "SOC 1",
+      "quote": "SOC 1 & SOC 2 Type II",
+      "source": "https://www.rillet.com/product/audit-compliance"
+    },
+    {
+      "id": "E4",
+      "label": "Certification held",
+      "value": "SOC 2",
+      "quote": "SOC 1 & SOC 2 Type II",
+      "source": "https://www.rillet.com/product/audit-compliance"
+    },
+    {
+      "id": "E5",
+      "label": "Certification held",
+      "value": "GDPR",
+      "quote": "GDPR committed\nAligned with international privacy expectations for global teams.",
+      "source": "https://www.rillet.com/product/audit-compliance"
+    },
+    {
+      "id": "E6",
+      "label": "Enterprise signal",
+      "value": "Multi-entity accounting",
+      "quote": "Multi-entity accounting",
+      "source": "https://www.rillet.com/"
+    },
+    {
+      "id": "E7",
+      "label": "Enterprise signal",
+      "value": "Audit & Compliance",
+      "quote": "Audit & Compliance",
+      "source": "https://www.rillet.com/"
+    },
+    {
+      "id": "E8",
+      "label": "Enterprise signal",
+      "value": "Enterprise SSO",
+      "quote": "Enterprise SSO\nThe right people see the right data.",
+      "source": "https://www.rillet.com/product/audit-compliance"
+    },
+    {
+      "id": "E9",
+      "label": "Enterprise signal",
+      "value": "SOX compliance framework",
+      "quote": "Rillet's Aura agents operate inside a controls framework designed for SOX, ICFR, and external audit.",
+      "source": "https://www.rillet.com/product/audit-compliance"
+    },
+    {
+      "id": "E10",
+      "label": "Compliance pressure",
+      "value": "Audit & Compliance",
+      "quote": "Audit & Compliance",
+      "source": "https://www.rillet.com/"
+    },
+    {
+      "id": "E11",
+      "label": "Compliance pressure",
+      "value": "hiring: Founding GRC Analyst",
+      "quote": "Founding GRC Analyst",
+      "source": "https://api.ashbyhq.com/posting-api/job-board/rillet"
+    },
+    {
+      "id": "E12",
+      "label": "Compliance pressure",
+      "value": "SOX compliance",
+      "quote": "Rillet's Aura agents operate inside a controls framework designed for SOX, ICFR, and external audit.",
+      "source": "https://www.rillet.com/product/audit-compliance"
+    },
+    {
+      "id": "E13",
+      "label": "Open roles",
+      "value": "47 open roles",
+      "quote": "Accounting Success Manager; Engineering Manager; Manager, Deployment Team - Accounting Solutions; Product Manager ; Business Development Representative; Deployment Lead - Accounting Solutions",
+      "source": "https://api.ashbyhq.com/posting-api/job-board/rillet"
+    },
+    {
+      "id": "E14",
+      "label": "Frameworks not yet shown on site",
+      "value": "ISO 27001",
+      "quote": "(absence: not found on any page read)",
+      "source": "code"
+    }
+  ],
+  "pains": [
+    {
+      "pain": "I need to scale our compliance posture to support our SOX compliance framework and external audit requirements as we grow.",
+      "evidence_ids": [
+        "E9",
+        "E12"
+      ],
+      "why_this_person": "As CTO, Stelios is responsible for the technical infrastructure and controls framework that underpins Rillet's SOX and ICFR compliance, making the efficiency of these audits a direct operational priority."
+    },
+    {
+      "pain": "I am struggling to manage the manual overhead of maintaining our existing certifications while simultaneously expanding into new frameworks like ISO 27001.",
+      "evidence_ids": [
+        "E3",
+        "E4",
+        "E11",
+        "E14"
+      ],
+      "why_this_person": "Stelios is actively hiring a Founding GRC Analyst to handle compliance, indicating that the current manual burden of maintaining SOC 1, SOC 2, and GDPR is becoming a bottleneck for the engineering organization."
+    }
+  ],
+  "email": {
+    "subject": "compliance automation for rillet",
+    "body": "Hi Stelios, I noticed Rillet is currently hiring a Founding GRC Analyst to support your SOX compliance framework and external audit requirements. As you scale, managing the manual overhead of maintaining your existing SOC 1, SOC 2, and GDPR certifications while preparing for new frameworks like ISO 27001 can become a significant bottleneck for your engineering team. Sprinto automates these compliance certifications by connecting directly to your cloud, HR, and code tools to collect audit evidence and monitor controls continuously. This removes the manual effort required to keep your security posture audit-ready as you grow. Would you be open to a brief conversation on how we can help your team streamline this process?",
+    "hook_evidence_id": "E11",
+    "hook_sentence": "Hi Stelios, I noticed Rillet is currently hiring a Founding GRC Analyst to support your SOX compliance framework and external audit requirements."
+  },
+  "validation": {
+    "ok": true,
+    "errors": [],
+    "words": 113
+  },
+  "status": "ready",
+  "reason": "dry run: passed every gate, not sent",
+  "seconds": 61,
+  "geminiCalls": 4,
+  "scoreParts": [
+    {
+      "pts": 30,
+      "why": "passed all hard gates"
+    },
+    {
+      "pts": 10,
+      "why": "stage inferred (open roles or enterprise plan)"
+    },
+    {
+      "pts": 15,
+      "why": "hiring for security/compliance: Founding GRC Analyst"
+    },
+    {
+      "pts": 10,
+      "why": "compliance pressure: Audit & Compliance; SOX compliance"
+    },
+    {
+      "pts": 10,
+      "why": "sells to enterprise: Enterprise SSO"
+    },
+    {
+      "pts": 5,
+      "why": "already holds SOC 2, GDPR (knows the audit pain)"
+    }
+  ],
+  "updatedAt": "2026-11-19T17:38:21.943Z"
+}

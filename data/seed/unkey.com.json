@@ -1,0 +1,132 @@
+{
+  "domain": "unkey.com",
+  "company": "Unkey",
+  "startedAt": "2026-11-19T17:33:41.515Z",
+  "trace": [
+    {
+      "step": "scrape",
+      "decision": "homepage read via jina",
+      "why": "469 words after cleaning"
+    },
+    {
+      "step": "qualify",
+      "decision": "qualified",
+      "why": "fit 80/100"
+    },
+    {
+      "step": "contact",
+      "decision": "no named people found",
+      "why": "hunter"
+    }
+  ],
+  "facts": {
+    "product_summary": {
+      "value": "Unkey provides a developer platform that acts as a control plane for managing API access, traffic, and infrastructure.",
+      "quote": "Unify your fragmented API stack with a single control plane for access and traffic.",
+      "source": "https://unkey.com"
+    },
+    "is_b2b_saas": {
+      "value": true,
+      "quote": "Unify your fragmented API stack with a single control plane for access and traffic.",
+      "source": "https://unkey.com"
+    },
+    "buyer": {
+      "value": "Developers and engineering teams building and managing APIs.",
+      "quote": "Unkey | The Developer Platform for Modern APIs",
+      "source": "https://unkey.com"
+    },
+    "funding_stage": null,
+    "employee_count": null,
+    "certifications_held": [
+      {
+        "value": "SOC 2",
+        "quote": "ild better APIs faster© 2026 Unkey Inc. All rights reserved.SOC 2",
+        "source": "https://unkey.com",
+        "by": "regex"
+      }
+    ],
+    "certifications_in_progress": [],
+    "enterprise_signals": [
+      {
+        "value": "High availability",
+        "quote": "Unkey deploys multiple replicas in different availability zones so your app survives during outages.",
+        "source": "https://unkey.com"
+      },
+      {
+        "value": "Multi-region routing",
+        "quote": "Route requests to the nearest region for consistently low latency.",
+        "source": "https://unkey.com"
+      }
+    ],
+    "compliance_pressure": [],
+    "recent_news": [],
+    "discarded": 0,
+    "platform": null,
+    "jobs": null
+  },
+  "gates": [
+    {
+      "name": "Reachable",
+      "pass": true,
+      "why": "homepage fetched and cleaned"
+    },
+    {
+      "name": "B2B SaaS",
+      "pass": true,
+      "why": "\"Unify your fragmented API stack with a single control plane for access and traffic.\""
+    },
+    {
+      "name": "Not already on a compliance platform",
+      "pass": true,
+      "why": "no Vanta/Drata/Secureframe/etc. found"
+    },
+    {
+      "name": "Has frameworks left to get",
+      "pass": true,
+      "why": "still to get: ISO 27001, GDPR (holds SOC 2)"
+    },
+    {
+      "name": "Series A-C",
+      "pass": null,
+      "why": "stage unknown: qualified at lower rank, flagged"
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://unkey.com",
+      "ok": true,
+      "method": "jina",
+      "words": 469
+    }
+  ],
+  "score": 25,
+  "flagged": true,
+  "contact": {
+    "ok": false,
+    "reason": "no decision-maker found",
+    "source": "hunter"
+  },
+  "status": "review",
+  "reason": "no decision-maker found",
+  "seconds": 32,
+  "geminiCalls": 1,
+  "scoreParts": [
+    {
+      "pts": 30,
+      "why": "passed all hard gates"
+    },
+    {
+      "pts": 5,
+      "why": "already holds SOC 2 (knows the audit pain)"
+    },
+    {
+      "pts": 5,
+      "why": "2 frameworks still to get"
+    },
+    {
+      "pts": -15,
+      "why": "stage unknown (flagged)"
+    }
+  ],
+  "updatedAt": "2026-11-19T17:38:21.937Z"
+}

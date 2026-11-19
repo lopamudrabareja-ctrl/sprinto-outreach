@@ -1,0 +1,123 @@
+{
+  "domain": "cal.com",
+  "company": "Cal",
+  "startedAt": "2026-11-19T17:33:23.763Z",
+  "trace": [
+    {
+      "step": "scrape",
+      "decision": "homepage read via request",
+      "why": "1252 words after cleaning"
+    },
+    {
+      "step": "qualify",
+      "decision": "dropped",
+      "why": "No frameworks left to get"
+    }
+  ],
+  "facts": {
+    "product_summary": {
+      "value": "Cal.com is a scheduling system that helps businesses and individuals manage their time and online bookings.",
+      "quote": "The highest-rated scheduling system that helps you grow your business and better find time.",
+      "source": "https://cal.com/"
+    },
+    "is_b2b_saas": {
+      "value": true,
+      "quote": "Deel runs its entire company on Cal.com, from sales to support.",
+      "source": "https://cal.com/"
+    },
+    "buyer": {
+      "value": "Businesses and teams looking to streamline scheduling across departments like sales, support, and operations.",
+      "quote": "Deel spends 35% less time scheduling across support, sales and ops, and gets back more than 6,000 hours a week.",
+      "source": "https://cal.com/"
+    },
+    "funding_stage": null,
+    "employee_count": null,
+    "certifications_held": [
+      {
+        "value": "SOC 2",
+        "quote": "buddy Cal.com ISO 27001 SOC 2",
+        "source": "https://cal.com/",
+        "by": "regex"
+      },
+      {
+        "value": "ISO 27001",
+        "quote": "apier Databuddy Cal.com ISO 27001 SOC 2 CCPA GDPR HIPAA Cal.com ISO 27001 Informa",
+        "source": "https://cal.com/",
+        "by": "regex"
+      },
+      {
+        "value": "GDPR",
+        "quote": "om ISO 27001 SOC 2 CCPA GDPR HIPAA Cal.com ISO 27001 Information Security AI",
+        "source": "https://cal.com/",
+        "by": "regex"
+      },
+      {
+        "value": "HIPAA",
+        "quote": "ISO 27001 SOC 2 CCPA GDPR HIPAA Cal.com ISO 27001 Information Security AICPA SO",
+        "source": "https://cal.com/",
+        "by": "regex"
+      }
+    ],
+    "certifications_in_progress": [],
+    "enterprise_signals": [
+      {
+        "value": "customer: Deel",
+        "quote": "Deel runs its entire company on Cal.com, from sales to support.",
+        "source": "https://cal.com/"
+      },
+      {
+        "value": "customer: Storyblok",
+        "quote": "Storyblok balances demo bookings across 40+ countries.",
+        "source": "https://cal.com/"
+      },
+      {
+        "value": "customer: Kiaora",
+        "quote": "Kiaora runs mission-critical healthcare scheduling across states.",
+        "source": "https://cal.com/"
+      }
+    ],
+    "compliance_pressure": [],
+    "recent_news": [],
+    "discarded": 0,
+    "platform": null,
+    "jobs": null
+  },
+  "gates": [
+    {
+      "name": "Reachable",
+      "pass": true,
+      "why": "homepage fetched and cleaned"
+    },
+    {
+      "name": "B2B SaaS",
+      "pass": true,
+      "why": "\"Deel runs its entire company on Cal.com, from sales to support.\""
+    },
+    {
+      "name": "Not already on a compliance platform",
+      "pass": true,
+      "why": "no Vanta/Drata/Secureframe/etc. found"
+    },
+    {
+      "name": "Has frameworks left to get",
+      "pass": false,
+      "why": "already holds SOC 2, ISO 27001, GDPR"
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://cal.com",
+      "ok": true,
+      "method": "request",
+      "words": 1252
+    }
+  ],
+  "score": 0,
+  "flagged": false,
+  "status": "dropped",
+  "reason": "No frameworks left to get",
+  "seconds": 18,
+  "geminiCalls": 1,
+  "scoreParts": [],
+  "updatedAt": "2026-11-19T17:38:21.941Z"
+}

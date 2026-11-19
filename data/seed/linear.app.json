@@ -1,0 +1,178 @@
+{
+  "domain": "linear.app",
+  "company": "Linear",
+  "startedAt": "2026-11-19T16:41:57.743Z",
+  "trace": [
+    {
+      "step": "scrape",
+      "decision": "homepage read via request",
+      "why": "274 words after cleaning"
+    },
+    {
+      "step": "scrape",
+      "decision": "32 open roles on ashby",
+      "why": "public job-board API"
+    },
+    {
+      "step": "qualify",
+      "decision": "fetch https://linear.app/security for \"certs\"",
+      "why": "only link matching \"certs\" (picked by code)"
+    },
+    {
+      "step": "qualify",
+      "decision": "dropped",
+      "why": "No frameworks left to get"
+    }
+  ],
+  "facts": {
+    "product_summary": {
+      "value": "Linear is a product development system designed to help teams and AI agents plan, build, and ship software.",
+      "quote": "The product development system for teams and agents Purpose-built for planning and building products.",
+      "source": "https://linear.app/"
+    },
+    "is_b2b_saas": {
+      "value": true,
+      "quote": "Linear powers over 50,000 product teams. From ambitious startups to major enterprises.",
+      "source": "https://linear.app/"
+    },
+    "buyer": {
+      "value": "product teams at companies ranging from startups to enterprises",
+      "quote": "Linear powers over 50,000 product teams. From ambitious startups to major enterprises.",
+      "source": "https://linear.app/"
+    },
+    "funding_stage": null,
+    "employee_count": null,
+    "certifications_held": [
+      {
+        "value": "SOC 2",
+        "quote": "SOC 2 compliance",
+        "source": "https://linear.app/security"
+      },
+      {
+        "value": "GDPR",
+        "quote": "GDPR compliance",
+        "source": "https://linear.app/security"
+      },
+      {
+        "value": "HIPAA",
+        "quote": "HIPAA compliance",
+        "source": "https://linear.app/security"
+      },
+      {
+        "value": "ISO 27001",
+        "quote": "ISO 27001 certified",
+        "source": "https://linear.app/security"
+      }
+    ],
+    "certifications_in_progress": [],
+    "enterprise_signals": [
+      {
+        "value": "serves major enterprises",
+        "quote": "Linear powers over 50,000 product teams. From ambitious startups to major enterprises.",
+        "source": "https://linear.app/"
+      },
+      {
+        "value": "Single sign-on (SSO)",
+        "quote": "Single sign-on (SSO)",
+        "source": "https://linear.app/security"
+      },
+      {
+        "value": "Audit logs",
+        "quote": "Audit logs",
+        "source": "https://linear.app/security"
+      },
+      {
+        "value": "Admin controls",
+        "quote": "Admin controls",
+        "source": "https://linear.app/security"
+      }
+    ],
+    "compliance_pressure": [],
+    "recent_news": [],
+    "discarded": 2,
+    "platform": null,
+    "jobs": {
+      "board": "ashby",
+      "url": "https://api.ashbyhq.com/posting-api/job-board/linear",
+      "titles": [
+        "Senior / Staff Fullstack Engineer",
+        "Senior / Staff Fullstack Engineer",
+        "Senior / Staff Product Engineer",
+        "Senior / Staff Product Engineer",
+        "Product Engineer",
+        "Product Manager",
+        "Product Manager",
+        "Product Support Specialist, Pacific/Mountain Time",
+        "Account Executive, Startups",
+        "Senior / Staff Product Engineer, Applied AI",
+        "Creative Producer",
+        "Senior / Staff Product Designer",
+        "Developer Relations",
+        "Developer Relations",
+        "Product Marketing Manager",
+        "Product Marketing Manager",
+        "Mobile Product Designer",
+        "Product Support Specialist, APAC",
+        "Creative Producer",
+        "Production Designer",
+        "Production Designer",
+        "Deal Desk",
+        "Analytics Engineer",
+        "Solutions Engineer, APAC",
+        "Product Support Specialist, APAC",
+        "Account Executive, Growth ",
+        "Account Executive, Enterprise",
+        "Customer Success Manager, APAC",
+        "Field Marketing Manager",
+        "Field Marketing Manager, Europe",
+        "Product Support Specialist, Eastern/Central Time",
+        "Account Executive, Growth (EMEA)"
+      ]
+    }
+  },
+  "gates": [
+    {
+      "name": "Reachable",
+      "pass": true,
+      "why": "homepage fetched and cleaned"
+    },
+    {
+      "name": "B2B SaaS",
+      "pass": true,
+      "why": "\"Linear powers over 50,000 product teams. From ambitious startups to major enterprises.\""
+    },
+    {
+      "name": "Not already on a compliance platform",
+      "pass": true,
+      "why": "no Vanta/Drata/Secureframe/etc. found"
+    },
+    {
+      "name": "Has frameworks left to get",
+      "pass": false,
+      "why": "already holds SOC 2, ISO 27001, GDPR"
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://linear.app",
+      "ok": true,
+      "method": "request",
+      "words": 274
+    },
+    {
+      "url": "https://linear.app/security",
+      "ok": true,
+      "method": "request",
+      "words": 180,
+      "for": "certs"
+    }
+  ],
+  "score": 0,
+  "flagged": false,
+  "status": "dropped",
+  "reason": "No frameworks left to get",
+  "seconds": 40,
+  "geminiCalls": 2,
+  "scoreParts": [],
+  "updatedAt": "2026-11-19T17:38:21.942Z"
+}

@@ -1,0 +1,7 @@
+# Batch 2: Series A-C SaaS candidates
+dub.co
+resend.com
+cal.com
+unkey.com
+browserbase.com
+tldraw.com
